@@ -1,0 +1,92 @@
+:root {
+    --background-color: linear-gradient(to right, rgb(0, 0, 0), rgb(24, 24, 24) 30%, rgb(22, 21, 34) 70%, rgb(5, 5, 38));
+    --text-color:wheat;
+    --dark:rgb(45, 23, 46);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    background: var(--background-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile {
+    flex-basis: 15rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile img {
+    max-width: 100%;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 1rem;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    color: inherit; /* Hereda el color del contenedor padre */
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+.profile h2:focus {
+    color: red; }
+
+.details {
+    flex-basis: 30rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color:var(--dark);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    
+    
+}
+
+.back-button:hover, .back-button:focus {
+    background-color: rgba(159, 20, 20, 0.5);
+}
+
+@media screen and (max-width: 48rem) {
+    main {
+        flex-direction: column;
+    }
+    
+    .profile, .details {
+        flex-basis: 100%;
+    }
+}
+
